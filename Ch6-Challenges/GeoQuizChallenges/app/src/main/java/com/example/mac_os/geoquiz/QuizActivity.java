@@ -27,33 +27,32 @@ public class QuizActivity extends AppCompatActivity {
     ImageButton mPrevButton;
 
     int mCurrentIndex = 0;
-    int Grade =0;
-    int AllQuestion =0;
+    int Grade = 0;
+    int AllQuestion = 0;
     String Key_Index = "Index";
     String Key_Cheater = "Cheater";
     int mRequestCode = 0;
     boolean mIsCheater;
-    int mCheatCounter=0;
+    int mCheatCounter = 0;
     String TAG = "QuizActivity";
     TextView mQuestionTextView;
     TextView mBuildVersionTextView;
 
 
     private Question[] mQuestionBank = new Question[]{
-      new Question(R.string.question_australia,true,false,false),
-      new Question(R.string.question_Oceans,true,false,false),
-      new Question(R.string.question_mideast,false,false,false),
-      new Question(R.string.question_africa,false,false,false),
-      new Question(R.string.question_americas,true,false,false),
-      new Question(R.string.question_asia,true,false,false),
+            new Question(R.string.question_australia, true, false, false),
+            new Question(R.string.question_Oceans, true, false, false),
+            new Question(R.string.question_mideast, false, false, false),
+            new Question(R.string.question_africa, false, false, false),
+            new Question(R.string.question_americas, true, false, false),
+            new Question(R.string.question_asia, true, false, false),
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        if(savedInstanceState != null)
-        {
+        if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(Key_Index);
             mIsCheater = savedInstanceState.getBoolean(Key_Cheater);
         }
@@ -68,18 +67,11 @@ public class QuizActivity extends AppCompatActivity {
 
         UpdateQuestion();
 
+        //next to get the next question
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(mCurrentIndex < (mQuestionBank.length -1) ) {
-                    mCurrentIndex++;
-                }
-                else
-                {
-                    mCurrentIndex = 0;
-                }
-                Log.d("UserAnswer of " + mQuestionBank[mCurrentIndex].getTextResId() ,"  is  "+ mQuestionBank[mCurrentIndex].isUserAnswer());
+                setNextQuestion();
                 UpdateQuestion();
             }
         });
@@ -87,104 +79,119 @@ public class QuizActivity extends AppCompatActivity {
          * Challenge Number 2 of ch2
          * in this challenge we have to make previous button
          */
+        //previous to get the previous question
         mPrevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mCurrentIndex <= 0) {
-                    mCurrentIndex=mQuestionBank.length-1;
-                }
-                else
-                {
-                    mCurrentIndex--;
-                }
-                Log.d("UserAnswer of " + mQuestionBank[mCurrentIndex].getTextResId() ,"  is  "+ mQuestionBank[mCurrentIndex].isUserAnswer());
+                setPrevQuestion();
                 UpdateQuestion();
             }
         });
-
+        //to cheat on the answer of the question
         mCheatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent i = new CheatActivity().NewIntent(QuizActivity.this, mQuestionBank[mCurrentIndex].isAnswerTrue());
-                    startActivityForResult(i, mRequestCode);
+                Intent i = new CheatActivity().NewIntent(QuizActivity.this, mQuestionBank[mCurrentIndex].isAnswerTrue());
+                startActivityForResult(i, mRequestCode);
             }
         });
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(true);
+                checkAnswer(true);
             }
         });
 
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CheckAnswer(false);
+                checkAnswer(false);
             }
         });
     }
 
+    private void setNextQuestion() {
+        if (mCurrentIndex < (mQuestionBank.length - 1)) {
+            mCurrentIndex++;
+        } else {
+            mCurrentIndex = 0;
+        }
+    }
+
+    private void setPrevQuestion() {
+        if (mCurrentIndex <= 0) {
+            mCurrentIndex = mQuestionBank.length - 1;
+        } else {
+            mCurrentIndex--;
+        }
+    }
+
     private void UpdateQuestion() {
         mQuestionTextView.setText(mQuestionBank[mCurrentIndex].getTextResId());
-        if(mQuestionBank[mCurrentIndex].isCheater()) {
+        //check if the user is cheater
+        isCheater();
+        //check if user answer or not
+        checkUserAnswer();
+        //Challenge of chapter 6 is to make limit to the cheat tries to only three times after that disable the button so here we are ..
+        limitCheatTries();
+    }
+
+    private void isCheater() {
+        if (mQuestionBank[mCurrentIndex].isCheater()) {
             mIsCheater = true;
-        }
-        else
-        {
+        } else {
             mIsCheater = false;
         }
-        if(mQuestionBank[mCurrentIndex].isUserAnswer())
-        {
+    }
+
+    private void checkUserAnswer() {
+        if (mQuestionBank[mCurrentIndex].isUserAnswer()) {
             mTrueButton.setEnabled(false);
             mFalseButton.setEnabled(false);
-        }
-        else
-        {
+        } else {
             mTrueButton.setEnabled(true);
             mFalseButton.setEnabled(true);
         }
-        //Challenge of chapter 6 is to make limit to the cheat tries to only three times after that disable the button so here we are ..
-        if(mCheatCounter >=3)
-        {
+    }
+
+    private void limitCheatTries() {
+        if (mCheatCounter >= 3) {
             mCheatButton.setEnabled(false);
-        }
-        else
-        {
-            if(mCheatCounter== 2)
-            {
-                Toast.makeText(QuizActivity.this,R.string.cheat_counter,Toast.LENGTH_SHORT).show();
+        } else {
+            if (mCheatCounter == 2) {
+                Toast.makeText(QuizActivity.this, R.string.cheat_counter, Toast.LENGTH_SHORT).show();
             }
             mCheatButton.setEnabled(true);
         }
     }
 
-    private void CheckAnswer(boolean UserPressed)
-    {
-        int messageResID= 0;
-        if(mIsCheater) {
-            messageResID = R.string.judgment_toast;
-        }else
-        {
-            if(UserPressed == mQuestionBank[mCurrentIndex].isAnswerTrue())
-            {
-                messageResID =R.string.correct_toast;
-                Grade ++;
-            }
-            else
-            {
-                messageResID = R.string.incorrect_toast;
-            }
-        }
+    private void setCheckAnswer() {
         mQuestionBank[mCurrentIndex].setUserAnswer(true);
         mTrueButton.setEnabled(false);
         mFalseButton.setEnabled(false);
         AllQuestion++;
-        Toast.makeText(QuizActivity.this,messageResID,Toast.LENGTH_SHORT).show();
-        ShowGrade();
+        showGrade();
     }
 
-    private void ShowGrade() {
+    private void checkAnswer(boolean UserPressed) {
+        int messageResID = 0;
+        if (mIsCheater) {
+            messageResID = R.string.judgment_toast;
+        } else {
+            if (UserPressed == mQuestionBank[mCurrentIndex].isAnswerTrue()) {
+                messageResID = R.string.correct_toast;
+                Grade++;
+            } else {
+                messageResID = R.string.incorrect_toast;
+            }
+        }
+        Toast.makeText(QuizActivity.this, messageResID, Toast.LENGTH_SHORT).show();
+        setCheckAnswer();
+    }
+
+    //To retrieve the user grade
+    private void showGrade() {
         if (mQuestionBank.length == AllQuestion) {
             Toast.makeText(QuizActivity.this, "The Grade is " + Grade, Toast.LENGTH_LONG).show();
         }
@@ -193,22 +200,20 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG,"OnSaveInstance");
-        outState.putInt(Key_Index,mCurrentIndex);
-        outState.putBoolean(Key_Cheater,mIsCheater);
+        Log.d(TAG, "OnSaveInstance");
+        outState.putInt(Key_Index, mCurrentIndex);
+        outState.putBoolean(Key_Cheater, mIsCheater);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == mRequestCode){
-            if(data == null)
-            {
+        if (requestCode == mRequestCode) {
+            if (data == null) {
                 return;
             }
-            mIsCheater =  new CheatActivity().wasAnswerShown(data);
-            if(mIsCheater)
-            {
-                mCheatCounter ++;
+            mIsCheater = new CheatActivity().wasAnswerShown(data);
+            if (mIsCheater) {
+                mCheatCounter++;
             }
             mQuestionBank[mCurrentIndex].setCheater(mIsCheater);
         }

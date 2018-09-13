@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class CheatActivity extends AppCompatActivity {
 
     String CorrectAnswer = "CorrectAnswer";
-    String Key_IsCheat ="IsCheat";
+    String Key_IsCheat = "IsCheat";
     String UserCheat = "UserCheat";
     boolean Answer;
     TextView mAnswerTextView;
@@ -27,71 +27,75 @@ public class CheatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cheat);
 
-         Answer = getIntent().getBooleanExtra(CorrectAnswer,false);
-         if(savedInstanceState != null)
-         {
-             mIsCheat = savedInstanceState.getBoolean(Key_IsCheat);
-         }
-         if(mIsCheat)
-         {
-             CheatFun(mIsCheat);
-         }
-         mAnswerButton = (Button) findViewById(R.id.answer_button);
-         mAnswerTextView = (TextView) findViewById(R.id.answer_text_view);
+        // Get answer from previous activity and save activity state
+        //
+        Answer = getIntent().getBooleanExtra(CorrectAnswer, false);
+        if (savedInstanceState != null) {
+            mIsCheat = savedInstanceState.getBoolean(Key_IsCheat);
+        }
 
-         mAnswerButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                     mAnswerTextView.setText("THE ANSWER TO QUESTION IS " + Answer);
-                     mIsCheat = true;
-                     CheatFun(mIsCheat);
+        // Set cheat state
+        if (mIsCheat) {
+            CheatFun(mIsCheat);
+        }
 
-                     int cx = mAnswerButton.getWidth()/2;
-                     int cy = mAnswerButton.getHeight()/2;
-                     float radius = mAnswerButton.getWidth();
-                 Animator anim = null;
-                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                     anim = ViewAnimationUtils.createCircularReveal(mAnswerButton,cx,cy,radius,0);
-                     anim.addListener(new AnimatorListenerAdapter() {
-                         @Override
-                         public void onAnimationEnd(Animator animation) {
-                             super.onAnimationEnd(animation);
-                             mAnswerButton.setVisibility(View.INVISIBLE);
-                         }
-                     });
-                     anim.start();
-                 }
-                 else
-                 {
-                     mAnswerButton.setVisibility(View.INVISIBLE);
-                 }
 
-             }
-         });
+        mAnswerButton = (Button) findViewById(R.id.answer_button);
+        mAnswerTextView = (TextView) findViewById(R.id.answer_text_view);
+
+
+        // handle get answer
+        mAnswerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAnswerTextView.setText("THE ANSWER TO QUESTION IS " + Answer);
+                mIsCheat = true;
+                CheatFun(mIsCheat);
+
+                // todo move this block to a function that handles animation
+                int cx = mAnswerButton.getWidth() / 2;
+                int cy = mAnswerButton.getHeight() / 2;
+                float radius = mAnswerButton.getWidth();
+                Animator anim = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    anim = ViewAnimationUtils.createCircularReveal(mAnswerButton, cx, cy, radius, 0);
+                    anim.addListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            mAnswerButton.setVisibility(View.INVISIBLE);
+                        }
+                    });
+                    anim.start();
+                } else {
+                    mAnswerButton.setVisibility(View.INVISIBLE);
+                }
+                // ------------------------------
+            }
+        });
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean(Key_IsCheat,mIsCheat);
+        outState.putBoolean(Key_IsCheat, mIsCheat);
 
     }
 
-    public boolean wasAnswerShown(Intent result){
-        return result.getBooleanExtra(UserCheat,false);
+    public boolean wasAnswerShown(Intent result) {
+        return result.getBooleanExtra(UserCheat, false);
     }
 
-    public void CheatFun(boolean ISCheat){
+    public void CheatFun(boolean ISCheat) {
         Intent i = new Intent();
-        i.putExtra(UserCheat,ISCheat);
-        setResult(RESULT_OK,i);
+        i.putExtra(UserCheat, ISCheat);
+        setResult(RESULT_OK, i);
     }
 
 
-    public Intent NewIntent(Context packageContext  ,boolean data )
-    {
-        Intent i = new Intent(packageContext,CheatActivity.class);
-        i.putExtra(CorrectAnswer,data);
+    public Intent NewIntent(Context packageContext, boolean data) {
+        Intent i = new Intent(packageContext, CheatActivity.class);
+        i.putExtra(CorrectAnswer, data);
         return i;
     }
 }
