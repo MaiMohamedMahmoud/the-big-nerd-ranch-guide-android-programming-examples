@@ -21,24 +21,24 @@ public class CrimeLab {
     }
 
     public Crime getCrime(UUID uuid) {
-        for (Crime crime : mCrimes) {
-            if (crime.getId() == uuid) {
-                return crime;
-            }
-        }
+
+//        for (Crime crime : mCrimes) {
+//            if (crime.getId().equals(uuid)) {
+//                return crime;
+//
+//            }
+//        }
         /**
          * A nother way to implement this function is like the following comment
          */
 
-        //        for(int i =0;i < mCrimes.size();i++)
-        //        {
-        //            if(mCrimes.get(i).getId()==uuid)
-        //            {
-        //                return mCrimes.get(i);
-        //            }
-        //        }
-
+        for (int i = 0; i < mCrimes.size(); i++) {
+            if (mCrimes.get(i).getId().equals(uuid)) {
+                return mCrimes.get(i);
+            }
+        }
         return null;
+
     }
 
     public List<Crime> getCrimes() {

@@ -1,5 +1,6 @@
 package com.example.mac_os.criminalintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,6 +28,7 @@ public class CrimeListFragment extends Fragment {
     RecyclerView recycle_list_crime;
     List<Crime> mListCrime;
     CrimeAdapter crimeAdapter;
+    int mRequestCode = 0;
 
     @Nullable
     @Override
@@ -56,7 +58,6 @@ public class CrimeListFragment extends Fragment {
         TextView mTextViewDate;
         Crime mCrimeholder;
         ImageView isSolvedImageView;
-
         public CrimeHolder(View itemView) {
             super(itemView);
             getItemView(itemView);
@@ -75,7 +76,12 @@ public class CrimeListFragment extends Fragment {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getContext(), "YOU Pressed " + mCrimeholder.getTitle(), Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getContext(), "YOU Pressed " + mCrimeholder.getTitle(), Toast.LENGTH_LONG).show();
+//
+//                    Toast.makeText(getActivity(),"Crime id is "+mCrimeholder.getId(),Toast.LENGTH_LONG).show();
+
+                    Intent i = new CrimeActivity().NewIntent(getActivity(),mCrimeholder.getId());
+                    startActivityForResult(i,mRequestCode);
                 }
             });
             return itemView;
