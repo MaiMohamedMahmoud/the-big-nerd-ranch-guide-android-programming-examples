@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CriminalIntent</string>
+    <string name="title_text_view">TITLE</string>
+    <string name="title_edit_hint">Enter a title for the crime.</string>
+    <string name="detail_text_view">DETAILS</string>
+    <string name="solved_check_box">Solved</string>
+    <string name="date_picker_title"> Date of Crime:</string>
+    <string name="add_crime">Add New Crime</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="delete"> Delete </string>
+    <string name="no_crime">There is no crime ..</string>
+
+    <plurals name="subtiltle_plural">
+        <item quantity="zero">%1$d crime</item>
+        <item quantity="one">%1$d crime</item>
+        <item quantity="other">%1$d crimes</item>
+    </plurals>
+</resources>
