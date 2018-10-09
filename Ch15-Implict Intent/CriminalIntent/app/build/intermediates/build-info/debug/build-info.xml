@@ -2,64 +2,31 @@
 <instant-run
     abi="x86"
     api-level="25"
-    build-mode="FULL"
+    build-mode="COLD"
     density="560dpi"
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.2"
-    timestamp="1539121997992"
+    timestamp="1539123022924"
     token="1056614096289717936"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="5039" />
+        duration="792" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="406" />
+        duration="89" />
     <task
         name="verifier"
-        duration="273" />
+        duration="14" />
 
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -102,6 +69,15 @@
         <artifact
             location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1539123022924"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
