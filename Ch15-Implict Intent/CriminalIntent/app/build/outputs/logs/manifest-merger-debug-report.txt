@@ -1,0 +1,122 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d657f530a97d9ebfcd374e8f83a67209/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/6cb11aebc20cf0475020068f8c60effb/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5ab7170a98d993e24753501374841f1d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0ee4da4d20549ae392fd633b0d5e45fe/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/56c73b89f63b6d90e7ab02292b1e394f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/eb2e9a9ed7985006ee8ff4e8bcc19eba/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/23755decdbc56d34cdf807fce619e7f8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9fc6f65da13463f197b3e863eb95542f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ac41dca7811df3cde71685a988539d93/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/81dbbc94f2325da6c9868d39ead776e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e8de4b53caffc1420a85d5e01afdd85/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/068760eec080f81968f209107b1ff4d7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6ad06a40272bb2a2b4fafb3dee80441d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b13ce2809179708b237a15281f3e51c9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f795b58e44b1ef82b1a3c60c82392355/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/6cb11aebc20cf0475020068f8c60effb/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/6cb11aebc20cf0475020068f8c60effb/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.mac_os.criminalintent.CrimeActivity
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:12:9-14:20
+	android:name
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:12:19-48
+activity#com.example.mac_os.criminalintent.CrimePagerActivity
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:15:9-18:20
+	android:parentActivityName
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:16:13-60
+	android:name
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:15:19-53
+activity#com.example.mac_os.criminalintent.CrimeListActivity
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:19:19-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml:23:27-74
+uses-sdk
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d657f530a97d9ebfcd374e8f83a67209/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d657f530a97d9ebfcd374e8f83a67209/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/6cb11aebc20cf0475020068f8c60effb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/6cb11aebc20cf0475020068f8c60effb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5ab7170a98d993e24753501374841f1d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/5ab7170a98d993e24753501374841f1d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0ee4da4d20549ae392fd633b0d5e45fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/0ee4da4d20549ae392fd633b0d5e45fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/56c73b89f63b6d90e7ab02292b1e394f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/56c73b89f63b6d90e7ab02292b1e394f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/eb2e9a9ed7985006ee8ff4e8bcc19eba/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/eb2e9a9ed7985006ee8ff4e8bcc19eba/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/23755decdbc56d34cdf807fce619e7f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/23755decdbc56d34cdf807fce619e7f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9fc6f65da13463f197b3e863eb95542f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9fc6f65da13463f197b3e863eb95542f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ac41dca7811df3cde71685a988539d93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ac41dca7811df3cde71685a988539d93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/81dbbc94f2325da6c9868d39ead776e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/81dbbc94f2325da6c9868d39ead776e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e8de4b53caffc1420a85d5e01afdd85/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/7e8de4b53caffc1420a85d5e01afdd85/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/068760eec080f81968f209107b1ff4d7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/068760eec080f81968f209107b1ff4d7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6ad06a40272bb2a2b4fafb3dee80441d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6ad06a40272bb2a2b4fafb3dee80441d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b13ce2809179708b237a15281f3e51c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b13ce2809179708b237a15281f3e51c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f795b58e44b1ef82b1a3c60c82392355/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/mac-os/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f795b58e44b1ef82b1a3c60c82392355/AndroidManifest.xml:20:5-44
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/src/main/AndroidManifest.xml
