@@ -1,10 +1,10 @@
 #Internal package file, do not edit.
-#Tue Oct 09 23:53:41 EET 2018
-1.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/14
+#Thu Oct 11 21:05:36 EET 2018
+1.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/45
 2.path=classes.dex
 0.baseType=DIRECTORY
 3.baseType=DIRECTORY
-2.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/11
+2.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/47
 3.set=DEX
 2.set=DEX
 1.baseType=DIRECTORY
@@ -12,8 +12,8 @@
 count=4
 1.set=DEX
 0.path=classes.dex
-3.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/13
+3.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/46
 0.set=DEX
-0.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/12
+0.base=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/48
 2.baseType=DIRECTORY
 1.path=classes.dex

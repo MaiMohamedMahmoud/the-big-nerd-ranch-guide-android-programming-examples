@@ -1,13 +1,23 @@
 package com.example.mac_os.criminalintent;
 
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -19,6 +29,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 import org.w3c.dom.Text;
@@ -39,6 +50,7 @@ public class CrimeFragment extends Fragment {
     Button mSendReport;
     public static String mCrimeID = "crimeID";
     public int Request_Date = 0;
+    public int Request_Contact = 1;
     UUID crimeID;
     CrimeLab crimeLab;
     public static String dateIntent = "Date";
@@ -57,6 +69,9 @@ public class CrimeFragment extends Fragment {
         Log.i("UUID CrimeFragment", crimeID + "");
         crimeLab = CrimeLab.getInstance(getActivity());
         mCrime = crimeLab.getCrime(crimeID);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && getActivity().checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.READ_CONTACTS, Manifest.permission.READ_CONTACTS}, Request_Contact);
+        }
     }
 
     public static CrimeFragment newInstance(UUID crimeId) {
@@ -165,22 +180,25 @@ public class CrimeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Intent pickContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(pickContactIntent, Request_Contact);
             }
         });
         mSendReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_TEXT, getCrimeReport());
-                i.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.crime_report_subject));
-                Intent.createChooser(i,getString(R.string.crime_report_subject));
-                startActivity(i);
+                Intent sendReportIntent = new Intent(Intent.ACTION_SEND);
+                sendReportIntent.setType("text/plain");
+                sendReportIntent.putExtra(Intent.EXTRA_TEXT, getCrimeReport());
+                sendReportIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.crime_report_subject));
+                Intent.createChooser(sendReportIntent, getString(R.string.crime_report_subject));
+                startActivity(sendReportIntent);
             }
         });
 
         return v;
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -192,6 +210,62 @@ public class CrimeFragment extends Fragment {
             Date date = (Date) data.getSerializableExtra(dateIntent);
             mCrime.setDate(date);
             updateDate();
+        }
+        if (requestCode == Request_Contact) {
+            Uri uri_contact = data.getData();
+            Cursor cursor_Uri_Contact;
+            String contact_Id = null;
+            String contact_Phone = null;
+            Cursor cursor_Phone;
+            //specify what is the filed you want your query to return;
+            String[] query_filed_contact_name = new String[]{ContactsContract.Contacts.DISPLAY_NAME, ContactsContract.Contacts._ID};
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                cursor_Uri_Contact = getActivity().getContentResolver().query(uri_contact, query_filed_contact_name, null, null);
+            } else {
+                cursor_Uri_Contact = new CursorLoader(
+                        getActivity(),
+                        uri_contact,
+                        query_filed_contact_name,
+                        null,
+                        null,
+                        null
+                ).loadInBackground();
+            }
+
+
+            try {
+                if (cursor_Uri_Contact.getCount() != 0) {
+                    cursor_Uri_Contact.moveToFirst();
+                    contact_Id = cursor_Uri_Contact.getString(1);
+                    contact_Phone = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                        cursor_Phone = getActivity().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?" + " AND " + ContactsContract.CommonDataKinds.Phone.TYPE + " = ?", new String[]{contact_Id, ContactsContract.CommonDataKinds.Phone.TYPE_HOME + ""}, null);
+                    } else {
+                        cursor_Phone = new CursorLoader(getActivity(), ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+                                ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?" + " AND " + ContactsContract.CommonDataKinds.Phone.TYPE + " = ?", new String[]{contact_Id, ContactsContract.CommonDataKinds.Phone.TYPE_HOME + ""}, null).loadInBackground();
+
+                    }
+                    try {
+                        if (cursor_Phone.getCount() != 0) {
+                            cursor_Phone.moveToFirst();
+                            contact_Phone = cursor_Phone.getString(cursor_Phone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                        }
+                    } finally {
+                        cursor_Phone.close();
+                    }
+
+
+                    String suspect_Name = cursor_Uri_Contact.getString(0) + "Phone " + contact_Phone;
+
+                    mCrime.setSuspect(suspect_Name);
+                    mChooseSuspect.setText(suspect_Name);
+                } else {
+                    return;
+                }
+
+            } finally {
+                cursor_Uri_Contact.close();
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-#Wed Oct 10 00:10:28 EET 2018
-base.0=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/6
+#Thu Oct 11 21:11:13 EET 2018
+base.0=/Users/mac-os/Documents/development/contribution/the-big-nerd-ranch-guide-android-programming-examples/Ch15-Implict Intent/CriminalIntent/app/build/intermediates/transforms/dexMerger/debug/40
 path.0=classes.dex
 renamed.0=classes.dex
