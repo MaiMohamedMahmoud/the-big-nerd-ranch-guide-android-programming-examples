@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_text_view"/>
+        android:text="@string/title_text_view" />
 
     <EditText
         android:id="@+id/title_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/title_edit_hint"/>
+        android:hint="@string/title_edit_hint" />
 
     <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/detail_text_view"
-        style="?android:attr/listSeparatorTextViewStyle" />
+        android:text="@string/detail_text_view" />
 
     <Button
         android:id="@+id/date_button"
@@ -32,23 +32,30 @@
         android:id="@+id/solved_checked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/solved_check_box"/>
+        android:text="@string/solved_check_box" />
 
     <Button
         android:id="@+id/delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/delete" />
+
     <Button
         android:id="@+id/btn_suspect_choose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/crime_suspect_text" />
+
     <Button
         android:id="@+id/btn_crime_report"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/crime_report_text" />
-
+    <Button
+        android:id="@+id/btn_call_suspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/call_suspect" />
 
 </LinearLayout>
